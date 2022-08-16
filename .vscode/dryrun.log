@@ -1,0 +1,5 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory `/Users/macbook/Desktop/Go-gRPC-server'
+docker exec -it postgres12 createdb --user
+make: Leaving directory `/Users/macbook/Desktop/Go-gRPC-server'
+ 
