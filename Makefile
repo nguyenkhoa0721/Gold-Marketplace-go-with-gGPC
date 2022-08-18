@@ -17,5 +17,10 @@ migrateup:
 migratedown:
 	migrate -path db/migration -database "postgres://root:secret@localhost:5432/gold_marketplace?sslmode=disable" -verbose down
 
+sqlc:
+	sqlc generate
 
-.PHONY: network postgres createdb migrateup migratedown
+test:
+	go test -v -cover ./...
+
+.PHONY: network postgres createdb migrateup migratedown sqlc test
